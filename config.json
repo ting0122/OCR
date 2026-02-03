@@ -1,0 +1,21 @@
+{
+  "input_pdf": "data/example.pdf",
+  "output_excel": "output/result.xlsx",
+  "omit_page_column": true,
+  "fields": [
+    {
+      "name": "身高",
+      "box": [235, 596, 368, 680],
+      "page_index": 1,
+      "cell": "A2",
+      "ocr_whitelist": "0123456789."
+    },
+    {
+      "name": "血色素",
+      "box": [1773, 1354, 1979, 1462],
+      "page_index": 1,
+      "cell": "B2",
+      "ocr_whitelist": ""
+    }
+  ]
+}
