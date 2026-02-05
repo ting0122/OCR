@@ -1,23 +1,20 @@
 #!/usr/bin/env python3
 """
-掃描檔 PDF 定點數據擷取與 Excel 自動化 (OCR-to-Excel Automation)
-根據 config.json 設定的像素座標裁切區域並進行 OCR，輸出至 Excel。
+掃描檔 PDF 定點數據擷取 (OCR)
+根據 config.json 設定的像素座標裁切區域並進行 OCR，將結果以 JSON Array 格式輸出至標準輸出。
 """
 
 import json
 import os
-import re
 from pathlib import Path
 
-import pandas as pd
 import pytesseract
-from openpyxl.utils import column_index_from_string
 from pdf2image import convert_from_path
-from PIL import Image
+from PIL import Image, ImageOps
 
 
 def load_config(path: str = "config.json") -> dict:
-    """讀取 JSON 設定檔，取得輸入 PDF、輸出路徑與欄位座標。"""
+    """讀取 JSON 設定檔，取得輸入 PDF 與欄位座標。"""
     config_path = Path(path)
     if not config_path.exists():
         raise FileNotFoundError(f"設定檔不存在: {path}")
@@ -32,12 +29,12 @@ def preprocess_image(image: Image.Image) -> Image.Image:
     """
     # 轉灰階
     gray = image.convert("L")
-    # 二值化：Otsu 或固定閾值，此處用 0/255 二值化
+    # 二值化：Otsu 或固定閾值，此處用 0/255 二值化，確保黑字白底
     threshold = 150
-    binary = gray.point(lambda p: 255 if p > threshold else 0, mode="1")
-    # 轉回 L 模式供 pytesseract 使用
-    result = binary.convert("L")
-    return result
+    # 使用 Image.eval 進行像素級二值化，確保相容性
+    binary = Image.eval(gray, lambda p: 255 if p > threshold else 0)
+    # Image.eval 輸出已經是 L 模式 (0-255)，所以不需要再次 convert("L")
+    return binary
 
 
 def extract_data_from_pdf(config: dict) -> list[dict]:
@@ -89,67 +86,14 @@ def extract_data_from_pdf(config: dict) -> list[dict]:
     return extracted_data
 
 
-def _parse_cell_ref(cell_ref: str) -> tuple[int, int]:
-    """將儲存格參照如 'B2' 解析為 (row, col_idx)，col_idx 為 1-based。"""
-    match = re.match(r"^([A-Za-z]+)(\d+)$", cell_ref.strip())
-    if not match:
-        raise ValueError(f"無效的儲存格參照: {cell_ref}")
-    col_letter, row = match.group(1).upper(), int(match.group(2))
-    return row, column_index_from_string(col_letter)
-
-
-def save_to_excel(
-    data: list[dict], output_path: str, config: dict | None = None
-) -> None:
-    """
-    將 List[dict] 寫入 .xlsx。
-    若 config 中欄位有指定 "cell"（如 "B2"），則寫入該欄、從該列開始，每頁一列。
-    """
-    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
-    fields = (config or {}).get("fields", [])
-    use_cells = any(f.get("cell") for f in fields)
-
-    if use_cells and fields:
-        from openpyxl import Workbook
-
-        wb = Workbook()
-        ws = wb.active
-        if ws is None:
-            raise RuntimeError("無法建立工作表")
-        omit_page = config.get("omit_page_column", False)
-        if not omit_page:
-            page_cell = config.get("page_cell", "A2")
-            page_row, page_col = _parse_cell_ref(page_cell)
-            ws.cell(row=page_row - 1, column=page_col, value="Page")
-        # 標題列：各欄位名稱寫在對應 cell 的上一列
-        for f in fields:
-            if not f.get("cell"):
-                continue
-            r, c = _parse_cell_ref(f["cell"])
-            ws.cell(row=r - 1, column=c, value=f["name"])
-        # 資料列：直向列出，每欄一個欄位、每頁一列
-        for i, record in enumerate(data):
-            row_offset = i
-            if not omit_page:
-                ws.cell(row=page_row + row_offset, column=page_col, value=record.get("Page"))
-            for f in fields:
-                cell_ref = f.get("cell")
-                if not cell_ref:
-                    continue
-                r, c = _parse_cell_ref(cell_ref)
-                ws.cell(row=r + row_offset, column=c, value=record.get(f["name"], ""))
-        wb.save(output_path)
-    else:
-        df = pd.DataFrame(data)
-        df.to_excel(output_path, index=False, engine="openpyxl")
-    print(f"數據已儲存至 {output_path}")
-
-
 def main() -> None:
     config_path = os.environ.get("OCR_CONFIG", "config.json")
     conf = load_config(config_path)
     result_array = extract_data_from_pdf(conf)
-    save_to_excel(result_array, conf["output_excel"], config=conf)
+
+    # 將結果以 JSON 格式輸出到標準輸出
+    # 使用 print 和 json.dumps 確保直接輸出純粹的 JSON 陣列
+    print(json.dumps(result_array, ensure_ascii=False))
 
 
 if __name__ == "__main__":
