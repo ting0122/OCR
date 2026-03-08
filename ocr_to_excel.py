@@ -10,7 +10,7 @@ from pathlib import Path
 
 import pytesseract
 from pdf2image import convert_from_path
-from PIL import Image, ImageOps
+from PIL import Image
 
 
 def load_config(path: str = "config.json") -> dict:
