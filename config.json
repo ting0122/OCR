@@ -28,351 +28,351 @@
       "name": "municipal",
       "box": [397, 595, 508, 647],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "D2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "transferred",
       "box": [612, 594, 1206, 646],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "E2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "industrial",
       "box": [835, 594, 961, 648],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "F2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "total_waste_intake",
       "box": [1057, 585, 1185, 652],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "G2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "bunker_inventory",
       "box": [946, 664, 1182, 733],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "H2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u1_throughput",
       "box": [1548, 573, 1698, 655],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "I2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u2_throughput",
       "box": [1805, 573, 1978, 650],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "J2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "total_throughput",
       "box": [2102, 572, 2278, 647],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "K2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u1_cumulative_throughput",
       "box": [1520, 660, 1694, 730],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "L2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u2_cumulative_throughput",
       "box": [1789, 659, 1976, 725],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "M2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "grand_total_cumulative",
       "box": [2101, 661, 2277, 720],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "N2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "ba_outbound",
       "box": [592, 948, 728, 1013],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "O2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "fa_outbound",
       "box": [819, 946, 966, 1008],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "P2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u1_lhv",
       "box": [1815, 1008, 1979, 1075],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "Q2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u2_lhv",
       "box": [2097, 1008, 2279, 1075],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "R2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u1_avg_steam",
       "box": [1829, 1080, 1975, 1145],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "S2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u2_avg_steam",
       "box": [2124, 1080, 2281, 1142],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "T2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u1_flue_gas_o2",
       "box": [1837, 1145, 1978, 1212],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "U2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u2_flue_gas_o2",
       "box": [2145, 1154, 2278, 1208],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "V2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u1_baghouse_inlet_temp",
       "box": [1844, 1215, 1978, 1288],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "W2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u2_baghouse_inlet_temp",
       "box": [2160, 1219, 2286, 1283],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "X2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u1_furnace_temp",
       "box": [1832, 1292, 1976, 1360],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "Y2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u2_furnace_temp",
       "box": [2141, 1288, 2282, 1357],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "Z2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "power_generation",
       "box": [797, 1158, 966, 1218],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AA2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "electricity_sold",
       "box": [816, 1229, 965, 1292],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AB2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "in-plant_power_usage",
       "box": [800, 1301, 968, 1364],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AC2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "lime",
       "box": [793, 1489, 965, 1556],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AD2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "activated_carbon",
       "box": [792, 1563, 969, 1623],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AE2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "urea",
       "box": [817, 1630, 970, 1687],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AF2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u1_max_so2",
       "box": [1929, 1683, 2102, 1745],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AG2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u2_max_so2",
       "box": [2104, 1682, 2285, 1744],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AH2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u1_max_co",
       "box": [1929, 1745, 2102, 1807],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AI2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u2_max_co",
       "box": [2108, 1745, 2283, 1808],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AJ2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u1_max_hci",
       "box": [1932, 1811, 2102, 1872],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AK2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u2_max_hci",
       "box": [2116, 1814, 2283, 1873],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AL2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u1_max_nox",
       "box": [1926, 1878, 2101, 1942],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AM2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u2_max_nox",
       "box": [2104, 1880, 2286, 1942],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AN2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u1_max_op",
       "box": [1931, 1946, 2105, 1999],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AO2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "u2_max_op",
       "box": [2109, 1946, 2286, 2001],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AP2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "diesel_received",
       "box": [143, 1890, 320, 1947],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AQ2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "total_diesel",
       "box": [321, 1891, 522, 1948],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AR2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "diesel_usage",
       "box": [524, 1887, 742, 1949],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AS2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "diesel_machinery_usage",
       "box": [746, 1885, 972, 1948],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AT2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "diesel_stock",
       "box": [973, 1888, 1201, 1951],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AU2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "process_water",
       "box": [528, 2087, 971, 2139],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AV2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "taipower",
       "box": [527, 2147, 970, 2199],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AW2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "raw_fly_ash",
       "box": [529, 2332, 971, 2386],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AX2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "cement",
       "box": [527, 2392, 969, 2446],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AY2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "chelating_agent",
       "box": [530, 2453, 972, 2507],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "AZ2",
+      "ocr_whitelist": "0123456789."
     },
     {
       "name": "stabilization_water",
       "box": [535, 2515, 977, 2569],
       "page_index": 1,
-      "cell": "",
-      "ocr_whitelist": ""
+      "cell": "BA2",
+      "ocr_whitelist": "0123456789."
     }
   ]
 }
